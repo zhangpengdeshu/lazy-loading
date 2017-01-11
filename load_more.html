@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes"  />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no">
+  <title>图片懒加载</title>
+  <link rel="stylesheet" href="css/lazy_loading.css">
+  <style>
+    .loading{
+      text-align:center;
+      display:none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+   <ul class="container-main" id="container-main">
+     <li class="container-list">
+       <a href="#" class="container-list-box">
+       <div class="item">
+         <div class="item-left">
+           <img src="images/loading.gif" data-src="images/icon_1.png">
+           </div>
+         <div class="item-right">
+           <h3>智能理财</h3>
+           <p>智能理财，财富的守护者</p>
+           </div>
+         </div>
+       </a>
+     </li>
+   </ul>
+  <p class="loading">加载更多</p>
+</div>
+<script type="text/javascript" src="js/lazy_02.js"></script>
+</body>
+</html>

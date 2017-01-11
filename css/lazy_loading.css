@@ -1,0 +1,144 @@
+html {
+  font-family: '微软雅黑', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 10px;
+}
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+ol,
+table,
+tr,
+td,
+thead,
+th,
+tbody,
+em,
+i,
+span,
+nav,
+section,
+article,
+aside,
+footer,
+header,
+img,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+header,
+section,
+article,
+nav,
+aside,
+footer,
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+em,
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+audio,
+video {
+  display: inline-block;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+textarea {
+  font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: none;
+  outline: none;
+}
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  background-color: #f8f8f8;
+  position: relative;
+}
+.container .container-main {
+  width: 100%;
+}
+.container .container-main .container-list {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-bottom: 1px solid #e7e7e7;
+  margin-top: 1.2rem;
+}
+.container .container-main .container-list:last-child {
+  border-bottom: none;
+}
+.container .container-main .container-list:first-child {
+  margin-top: 0;
+}
+.container .container-main .container-list a {
+  width: 100%;
+  display: block;
+}
+.container .container-main .container-list a .item {
+  width: 100%;
+  height: 6rem;
+}
+.container .container-main .container-list a .item .item-left {
+  width: 6rem;
+  height: 6rem;
+  text-align: center;
+  float: left;
+}
+.container .container-main .container-list a .item .item-left > img {
+  width: 6.4rem;
+  height: 6.4rem;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.container .container-main .container-list a .item .item-right {
+  float: left;
+  margin-left: 1.6rem;
+  height: 6rem;
+}
+.container .container-main .container-list a .item .item-right h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #363f38;
+  padding: .8rem 0 .8rem 0;
+}
+.container .container-main .container-list a .item .item-right p {
+  font-size: 1.4rem;
+  color: #5F5868;
+}

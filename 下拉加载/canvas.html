@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+  var c=document.getElementById("canvas");
+  var cxt= c.getContext('2d');
+  cxt.font='30px 微软雅黑';
+  var gradient=cxt.createLinearGradient(0,0, c.width,0);
+  gradient.addColorStop('0','magenta');
+  gradient.addColorStop('0.5','blue');
+  gradient.addColorStop('1.0','red');
+  cxt.strokeStyle=gradient;
+  cxt.strokeText('https://gstianfu.com',10,50);
+</script>
+</body>
+</html>

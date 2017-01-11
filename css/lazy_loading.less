@@ -1,0 +1,57 @@
+@import 'base.less';
+.container{
+  max-width:640px;
+  margin:0 auto;
+  background-color:#f8f8f8;
+  position:relative;
+  .container-main{
+    width:100%;
+    .container-list{
+      background-color:#fff;
+      padding:1.2rem;
+      border-bottom:1px solid #e7e7e7;
+      margin-top:1.2rem;
+      &:last-child{
+        border-bottom:none;
+      }
+      &:first-child{
+        margin-top:0;
+      }
+      a{
+        width:100%;
+        display:block;
+        .item{
+          width:100%;
+          height:6rem;
+          .item-left{
+            width:6rem;
+            height:6rem;
+            text-align: center;
+            float:left;
+            >img{
+              width:6.4rem;
+              height:6.4rem;
+              display:inline-block;
+              box-sizing: border-box;
+            }
+          }
+          .item-right{
+            float:left;
+            margin-left:1.6rem;
+            height:6rem;
+            h3{
+              font-weight:600;
+              font-size:1.8rem;
+              color:#363f38;
+              padding:.8rem 0 .8rem 0;
+            }
+            p{
+              font-size:1.4rem;
+              color:#5F5868;
+            }
+          }
+        }
+      }
+    }
+  }
+}

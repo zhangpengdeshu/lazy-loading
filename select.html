@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <title>向下拉动加载更多</title>
+  <style>
+    *{margin:0;padding:0;}
+    body{
+      font-size:14px;
+      font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    ul,li{list-style: none;}
+    header{
+      width:100%;
+      max-width:640px;
+      height:44px;
+      background-color:#ccc;
+      color:#fff;
+      margin:0 auto;
+      text-align:center;
+      line-height:44px;
+      position:absolute;
+      top:0;
+      left:0;
+    }
+   .main-wrapper{
+    width:100%;
+     background-color:#f8f8f8;
+     color:#fff;
+     position:absolute;
+     top:44px;
+     left:0;
+     overflow:auto;
+   }
+    .main-wrapper .main-box{
+      height:100px;
+      background-color:#555;
+      margin-top:10px;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .more{
+      position:fixed;
+      bottom:0;
+      width:100%;
+      height:44px;
+      background-color:#ccc;
+      text-align:center;
+      color:#fff;
+      line-height:44px;
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    格上理财
+  </header>
+  <div class="main-wrapper">
+     <div class="main-box">
+       <p>我是非常快乐的1111</p>
+     </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的2222</p>
+    </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的3333</p>
+    </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的4444</p>
+    </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的5555</p>
+    </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的6666</p>
+    </div>
+
+    <div class="main-box">
+      <p>我是非常快乐的7777</p>
+    </div>
+  </div>
+
+  <div class="more">
+    加载数据，请稍等
+  </div>
+<script>
+  var scroll={
+    header:document.querySelector('.header'),
+    main:document.querySelector('.main-wrapper'),
+    heightH:document.querySelector('.header').offsetHeight,
+    allHeight:document.querySelector('.main-wrapper').scrollHeight,//main 元素的所有的高
+    screen:document.documentElement.clientHeight || document.body.clientHeight,
+    more:document.querySelector('.more'),
+    mainH:'',
+    isscroll:true,
+    init:function(){
+      var self=this;
+      self.mainH=self.screen-self.heightH+'px';
+      self.main.style.height=self.mainH;
+      self.main.onscroll=function(){
+        var maxTop=self.allHeight-self.screen;
+        if(self.main.scrollTop>=maxTop){
+          console.log(self.main.scrollTop);
+          if(self.isscroll) {
+            self.isscroll=false;
+            self.more.style.display='block';
+            setTimeout(function () {
+              var oP = document.createElement('p');
+              oP.innerHTML = "我是开心的小胖" + parseInt(Math.random() * 1000);
+              var oDiv = document.createElement('div');
+              oDiv.className = "main-box";
+              oDiv.appendChild(oP);
+              self.main.appendChild(oDiv);
+              self.more.style.display='none';
+              self.allHeight = self.main.scrollHeight;
+              maxTop = self.allHeight - self.screen;
+              self.isscroll = true;
+            }, 2000);
+          }
+        }
+
+
+      }
+    }
+  }
+
+  window.onload=function(){
+    scroll.init();
+  }
+</script>
+</body>
+</html>
